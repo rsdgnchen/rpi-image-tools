@@ -90,6 +90,47 @@ sudo ./rpi-boot-switch.sh
 | WiFi | 可选，支持 2.4G / 5G，需输入 SSID、密码及国家码（默认 CN） |
 
 ---
+## 启动顺序编码说明
+
+| 选项 | 编码 | 启动顺序 |
+| :--- | :--- | :--- |
+| 1 | `0xf41` | SD 卡 → USB → 重试 |
+| 2 | `0xf14` | USB → SD 卡 → 重试 |
+| 3 | `0xf12` | 网络 → SD 卡 → 重试 |
+
+- **0xf41**: 优先从 SD 卡启动，若失败则尝试 USB，再失败则循环重试。
+- **0xf14**: 优先从 USB 设备启动，若失败则尝试 SD 卡，再失败则循环重试。
+- **0xf12**: 优先从网络启动，若失败则尝试 SD 卡，再失败则循环重试。
+
+## 切换启动介质（快速命令）
+
+```bash
+# 1. 查看当前启动顺序
+sudo rpi-eeprom-config | grep BOOT_ORDER
+
+# 2. 切换到 SD 卡优先
+sudo rpi-eeprom-config --apply - <<< $'[all]\nBOOT_ORDER=0xf41'
+
+# 切换到 USB 优先
+sudo rpi-eeprom-config --apply - <<< $'[all]\nBOOT_ORDER=0xf14'
+
+# 切换到 网络启动优先
+sudo rpi-eeprom-config --apply - <<< $'[all]\nBOOT_ORDER=0xf12'
+
+# 3. 重启生效
+sudo reboot
+```
+
+## 注意事项
+
+- 修改后必须**重启**才能生效。
+- 切换启动介质脚本仅用于树莓派 4B。
+- 需提前安装 `rpi-eeprom` 工具：
+  ```bash
+  sudo apt update && sudo apt install rpi-eeprom
+  ```
+
+---
 
 ## 🔒 安全特性
 
