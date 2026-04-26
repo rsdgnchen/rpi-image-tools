@@ -14,6 +14,7 @@
 #   * 在线自动获取最新镜像列表 (按发布日期排序)
 #====================================================================
 
+exec </dev/tty 2>/dev/null || true
 #--------- 预置镜像变量 (离线回退用) ----------
 IMAGE_LITE="https://downloads.raspberrypi.com/raspios_lite_arm64/images/raspios_lite_arm64-2026-04-21/2026-04-21-raspios-trixie-arm64-lite.img.xz"
 IMAGE_FULL="https://downloads.raspberrypi.com/raspios_full_arm64/images/raspios_full_arm64-2026-04-21/2026-04-21-raspios-trixie-arm64-full.img.xz"
