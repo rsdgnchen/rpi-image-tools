@@ -35,7 +35,7 @@ chmod +x rpi-image-flash.sh
 sudo ./rpi-image-flash.sh
 ```
 
-接下来按照屏幕提示选择镜像、目标设备并配置账号即可。
+接下来按照提示选择镜像、目标设备并配置账号即可。
 
 ---
 
