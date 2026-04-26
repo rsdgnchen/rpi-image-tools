@@ -24,8 +24,6 @@
 
 ## 🚀 快速开始
 
-只需三步，无需懂 Shell！
-
 ```bash
 # 1. 下载脚本
 curl -O http://192.168.31.8:3000/yaha/rpi-image-tools/raw/branch/main/rpi-image-flash.sh
