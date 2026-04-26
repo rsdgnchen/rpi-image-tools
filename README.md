@@ -15,7 +15,7 @@
 ## 快速使用
 
 ```bash
-# 下载j脚本
+# 下载脚本
 curl -O http://192.168.31.8:3000/yaha/rpi-image-tools/raw/branch/main/rpi-image-flash.sh
 
 # 赋予可执行权限
