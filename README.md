@@ -70,7 +70,7 @@ sudo ./rpi-image-flash.sh
    - `wpa_supplicant.conf`（可选，WiFi 配置）
 
 8. **完成**
-   关机、拔掉原系统盘、插入新盘并加电，即可通过 SSH 远程登录。
+   使用raspi-config 切换启动介质。
 
 ---
 
