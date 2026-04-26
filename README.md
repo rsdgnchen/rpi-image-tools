@@ -102,25 +102,6 @@ sudo ./rpi-boot-switch.sh
 - **0xf14**: 优先从 USB 设备启动，若失败则尝试 SD 卡，再失败则循环重试。
 - **0xf12**: 优先从网络启动，若失败则尝试 SD 卡，再失败则循环重试。
 
-## 切换启动介质（快速命令）
-
-```bash
-# 1. 查看当前启动顺序
-sudo rpi-eeprom-config | grep BOOT_ORDER
-
-# 2. 切换到 SD 卡优先
-sudo rpi-eeprom-config --apply - <<< $'[all]\nBOOT_ORDER=0xf41'
-
-# 切换到 USB 优先
-sudo rpi-eeprom-config --apply - <<< $'[all]\nBOOT_ORDER=0xf14'
-
-# 切换到 网络启动优先
-sudo rpi-eeprom-config --apply - <<< $'[all]\nBOOT_ORDER=0xf12'
-
-# 3. 重启生效
-sudo reboot
-```
-
 ## 注意事项
 
 - 修改后必须**重启**才能生效。
