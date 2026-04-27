@@ -69,14 +69,7 @@ sudo ./rpi-image-flash.sh
 
 8. **切换启动介质**  
 ```bash
-# 1. 下载脚本
-curl -O http://192.168.31.8:3000/yaha/rpi-image-tools/raw/branch/main/rpi-boot-switch.sh
-
-# 2. 赋予执行权限
-chmod +x rpi-boot-switch.sh
-
-# 3. 以 root 权限运行
-sudo ./rpi-boot-switch.sh
+curl -O http://192.168.31.8:3000/yaha/rpi-image-tools/raw/branch/main/rpi-boot-switch.sh && chmod +x rpi-boot-switch.sh && sudo ./rpi-boot-switch.sh
 ```
 
 ---
