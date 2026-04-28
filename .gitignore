@@ -1,1 +1,83 @@
+# ===== 开发工具和IDE =====
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ===== 操作系统文件 =====
 .DS_Store
+Thumbs.db
+Desktop.ini
+
+# ===== 日志文件 =====
+*.log
+logs/
+*.error
+
+# ===== 压缩文件 =====
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# ===== 图片/视频/音频（如果需要排除） =====
+# *.jpg
+# *.png
+# *.gif
+# *.mp4
+# *.mp3
+
+# ===== 办公文档（如果需要排除） =====
+# *.doc
+# *.docx
+# *.xls
+# *.xlsx
+# *.pdf
+
+# ===== 数据库文件 =====
+*.db
+*.sqlite
+*.sqlite3
+
+# ===== 备份文件 =====
+*.bak
+*.backup
+*.old
+
+# ===== 临时文件 =====
+*.tmp
+*.temp
+*.cache
+
+# ===== 编译文件 =====
+*.class
+*.o
+*.exe
+*.dll
+*.so
+
+# ===== 特定应用 =====
+# Node.js
+node_modules/
+npm-debug.log*
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+
+# Java
+target/
+*.jar
+*.war
+
+# C/C++
+*.out
+*.app
