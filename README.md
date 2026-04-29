@@ -24,7 +24,7 @@
 
 ### 1. 下载烧录脚本
 ```bash
-curl -O https://raw.githubusercontent.com/CHERISHTOBY/rpi-image-tools/main/rpi-image-flash.sh
+curl -O https://raw.githubusercontent.com/rsdgnchen/rpi-image-tools/main/rpi-image-flash.sh
 ```
 ### 2. 赋予执行权限
 ```bash
@@ -37,7 +37,7 @@ sudo ./rpi-image-flash.sh
 ```
 ###  4. 切换启动介质
 ```bash
-curl -O https://raw.githubusercontent.com/CHERISHTOBY/rpi-image-tools/main/rpi-boot-switch.sh && chmod +x rpi-boot-switch.sh && sudo ./rpi-boot-switch.sh
+curl -O https://raw.githubusercontent.com/rsdgnchen/rpi-image-tools/main/rpi-boot-switch.sh && chmod +x rpi-boot-switch.sh && sudo ./rpi-boot-switch.sh
 ```
 
 ---
